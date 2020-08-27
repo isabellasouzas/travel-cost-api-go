@@ -1,6 +1,9 @@
 package models
 
-import "go.mongodb.org/mongo-driver/bson/primitive"
+import (
+	"go.mongodb.org/mongo-driver/bson/primitive"
+	"time"
+)
 
 type DataTravel struct {
 	ID                      primitive.ObjectID `bson:"_id,omitemptly"`
@@ -10,8 +13,8 @@ type DataTravel struct {
 	NomeDoOrgaoSuperior     string             `bson:"NomeDoOrgao Superior,omitemptly" `
 	Nome                    string             `bson:"Nome,omitemptly" `
 	Cargo                   string             `bson:"Cargo,omitemptly"`
-	DataDeInicio            string             `bson:"DataDeInicio,omitemptly" `
-	DataDeFim               string             `bson:"DataDeFim,omitemptly" `
+	DataDeInicio            time.Time          `bson:"DataDeInicio,omitemptly" `
+	DataDeFim               time.Time          `bson:"DataDeFim,omitemptly" `
 	Destinos                string             `bson:"Destinos,omitemptly"`
 	ValorDiarias            float64            `bson:"Valor diarias,omitemptly" `
 	ValorPassagens          float64            `bson:"Valor passagens,omitemptly"`
