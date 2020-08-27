@@ -7,7 +7,7 @@ import (
 
 type DataTravel struct {
 	ID                      primitive.ObjectID `bson:"_id,omitemptly"`
-	IdentificadorDoProcesso string             `bson:"IdentificadorDoProcesso"`
+	IdentificadorDoProcesso int                `bson:"IdentificadorDoProcesso"`
 	Situacao                string             `bson:"Situacao,omitemptly"`
 	ViagemUrgente           string             `bson:"ViagemUrgente,omitemptly"`
 	NomeDoOrgaoSuperior     string             `bson:"NomeDoOrgao Superior,omitemptly" `
