@@ -1,7 +1,6 @@
 package main
 
 import (
-	"io"
 	//"context"
 	//"fmt"
 	//"github.com/bellasouzas/travel-cost-api-go/db_config"
@@ -14,17 +13,12 @@ import (
 
 func main() {
 
-	helloHandler := func(w http.ResponseWriter, req *http.Request) {
-		io.WriteString(w, "Hello, world!\n")
-	}
-
-	http.HandleFunc("/hello", helloHandler)
 	http.HandleFunc("/getalldata", routers.GetAllData)
 	http.HandleFunc("/totalcostreservartion", routers.TotalCostReservations)
 	http.HandleFunc("/totalcostpermonth", routers.TotalCostPerMonth)
 	http.HandleFunc("/findbyname", routers.FindByName)
 
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	log.Fatal(http.ListenAndServe(":7000", nil))
 
 	//
 	//
