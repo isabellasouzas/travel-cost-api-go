@@ -5,6 +5,7 @@ import (
 	"time"
 )
 
+//DataTravel modeling database
 type DataTravel struct {
 	ID                      primitive.ObjectID `bson:"_id,omitemptly"`
 	IdentificadorDoProcesso int                `bson:"IdentificadorDoProcesso"`
@@ -19,4 +20,10 @@ type DataTravel struct {
 	ValorDiarias            float64            `bson:"Valor diarias,omitemptly" `
 	ValorPassagens          float64            `bson:"Valor passagens,omitemptly"`
 	ValorOutrosGastos       float64            `bson:"Valor outros gastos,omitemptly"`
+}
+
+//ReservationsStatusTotal represents the sum of total cost of reservations
+type ReservationsStatusTotal struct {
+	ID                    string  `bson:"_id"`
+	ReservationsTotalCost float64 `bson:"ReservationsTotalCost"`
 }
