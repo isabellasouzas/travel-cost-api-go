@@ -22,11 +22,11 @@ func TotalCostReservations(res http.ResponseWriter, req *http.Request) {
 	json.NewEncoder(res).Encode(controllers.TotalCostReservationsFunc())
 }
 
-TotalCostPerMonth sends a response containing the total sum per month
+// TotalCostPerMonth sends a response containing the total sum per month
 func TotalCostPerMonth(res http.ResponseWriter, req *http.Request) {
 	res.Header().Set("Content-Type", "application/json")
 	fmt.Println("Executing TotalCostReservations")
-	var month := 1
+	var month = 1
 	json.NewEncoder(res).Encode(controllers.TotalCostPerMonthFunc(month))
 }
 

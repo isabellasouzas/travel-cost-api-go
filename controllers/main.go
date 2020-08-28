@@ -69,7 +69,7 @@ func TotalCostPerMonthFunc(month int)  ([]models.TotalCostPerMonth) {
 	pipeline := make([]bson.M, 0)
 	groupStage:= bson.M{
 		"$group": bson.M{
-			"month": month,
+			"month": "$month",
 			"TotalCost": bson.M{"$sum": "$expr", "$month": bson.M{
 				"$eq": "$Periodo - Data de inicio"}, 1}},
 		},
@@ -93,5 +93,4 @@ func TotalCostPerMonthFunc(month int)  ([]models.TotalCostPerMonth) {
 
 	return pipelineResult
 
-	return
 }

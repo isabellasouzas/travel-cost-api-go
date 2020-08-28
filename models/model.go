@@ -20,7 +20,7 @@ type DataTravel struct {
 	ValorDiarias            float64            `bson:"Valor diarias,omitemptly" `
 	ValorPassagens          float64            `bson:"Valor passagens,omitemptly"`
 	ValorOutrosGastos       float64            `bson:"Valor outros gastos,omitemptly"`
-	Month              		time.Time          `bson:"month,omitemptly" 
+	Month                   time.Time          `bson:"month,omitemptly`
 }
 
 //ReservationsStatusTotal represents the sum of total cost of reservations
@@ -31,6 +31,6 @@ type ReservationsStatusTotal struct {
 
 //TotalCostPerMonth represents total sum of cost of reservations per month
 type TotalCostPerMonth struct {
-	Month  int `bson:"month"`
+	Month     int     `bson:"month"`
 	TotalCost float64 `bson:"totalcost"`
 }
