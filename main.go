@@ -2,11 +2,6 @@ package main
 
 import (
 	"fmt"
-	//"context"
-	//"fmt"
-	//"github.com/bellasouzas/travel-cost-api-go/db_config"
-	//"github.com/bellasouzas/travel-cost-api-go/routers"
-	//"go.mongodb.org/mongo-driver/bson"
 	"github.com/bellasouzas/travel-cost-api-go/routers"
 	"log"
 	"net/http"
@@ -16,7 +11,7 @@ func main() {
 
 	http.HandleFunc("/getalldata", routers.GetAllData)
 	http.HandleFunc("/totalcostreservartion", routers.TotalCostReservations)
-	http.HandleFunc("/totalcostpermonth", routers.TotalCostPerMonth)
+	http.HandleFunc("/totalcostpermonth/{month}", routers.TotalCostPerMonth)
 	http.HandleFunc("/findbyname", routers.FindByName)
 	fmt.Println("Server is running...")
 	log.Fatal(http.ListenAndServe(":7000", nil))

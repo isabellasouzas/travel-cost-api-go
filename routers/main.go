@@ -15,16 +15,19 @@ func GetAllData(res http.ResponseWriter, req *http.Request) {
 	json.NewEncoder(res).Encode(controllers.GetAllDataFunc())
 }
 
-//TotalCostReservations
+//TotalCostReservations sends a response containing the total sum of Reservations
 func TotalCostReservations(res http.ResponseWriter, req *http.Request) {
 	res.Header().Set("Content-Type", "application/json")
 	fmt.Println("Executing TotalCostReservations")
 	json.NewEncoder(res).Encode(controllers.TotalCostReservationsFunc())
 }
 
-//TotalCostPerMonth
+TotalCostPerMonth sends a response containing the total sum per month
 func TotalCostPerMonth(res http.ResponseWriter, req *http.Request) {
-	io.WriteString(res, "TotalCostPerMonth!\n")
+	res.Header().Set("Content-Type", "application/json")
+	fmt.Println("Executing TotalCostReservations")
+	var month := 1
+	json.NewEncoder(res).Encode(controllers.TotalCostPerMonthFunc(month))
 }
 
 //FindByName
