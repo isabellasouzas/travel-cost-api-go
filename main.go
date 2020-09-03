@@ -11,13 +11,11 @@ func main() {
 
 	http.HandleFunc("/getalldata", routers.GetAllData)
 	http.HandleFunc("/totalcostreservartion", routers.TotalCostReservations)
-	http.HandleFunc("/totalcostpermonth/{month}", routers.TotalCostPerMonth)
-	http.HandleFunc("/findbyname", routers.FindByName)
+	//http.HandleFunc("/findbyname", routers.FindByName)
 	fmt.Println("Server is running...")
+
 	log.Fatal(http.ListenAndServe(":7000", nil))
 
-	//
-	//
 	//conn := db_config.GetMongoConnection()
 	//collection := conn.Database("quickstart").Collection("reservations")
 	//

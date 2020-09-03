@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
+./run_database.sh
+./db_cleaner.sh
 go build
-./scripts/run_database.sh
-./scripts/db_cleaner.sh
 go run main.go
