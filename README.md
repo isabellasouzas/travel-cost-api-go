@@ -17,28 +17,6 @@ Para rodar esta aplicação você precisará ter o docker instalado na sua máqu
 
 * No diretório scripts rode o comando ```./runner.sh```
 
-* 
 
-
-
-### Installation
-
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
-
-```bash
-pip install foobar
-```
-
-## Usage
-
-```python
-import foobar
-
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
-```
-
-
-## Licença
+### Licença
 [MIT](https://choosealicense.com/licenses/mit/)
