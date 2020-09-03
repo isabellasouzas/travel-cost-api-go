@@ -3,7 +3,14 @@
 Travel-cost-api é uma api que se conecta com mongodb com teste de integração.
 Os dados utilizados nesse material de estudo foram retirados do [portal da transparência do Governo Brasileiro](http://www.portaltransparencia.gov.br/viagens/consulta?ordenarPor=de&direcao=desc)
 
-### 📋 Pré-requisitos
+## 🚀 Começando
+
+Clone este repositorio para sua máquina utilizando ```https://github.com/Bellasouzas/travel-cost-api-go.git``` 
+
+
+
+## 📋 Pré-requisitos
+
 
 Para rodar esta aplicação você precisará ter o docker instalado na sua máquina e um container com uma imagem mongodb iniciado
 
