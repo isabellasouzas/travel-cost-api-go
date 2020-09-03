@@ -7,7 +7,6 @@ import (
 	"io/ioutil"
 	"log"
 	"os"
-	"path/filepath"
 	"testing"
 	"time"
 )
@@ -59,6 +58,7 @@ func TestMain(m *testing.M) int {
 	}
 
 	exitVal := m.Run()
+
 	defer os.RemoveAll(tempDir) // clean up
 	os.Exit(TestMain(m))
 	return exitVal
