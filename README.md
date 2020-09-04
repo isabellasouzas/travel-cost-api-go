@@ -1,6 +1,6 @@
 # travel-cost-api-go
 
-Travel-cost-api é uma api que se conecta com mongodb com teste de integração.
+Travel-cost-api é uma API que se conecta com mongodb com teste de integração.
 Os dados utilizados nesse material de estudo foram retirados do [portal da transparência do Governo Brasileiro](http://www.portaltransparencia.gov.br/viagens/consulta?ordenarPor=de&direcao=desc)
 (em aberto)
 
